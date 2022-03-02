@@ -76,6 +76,26 @@
 	<build>
 		<plugins>
 			<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>appengine-maven-plugin</artifactId>
+				<version>2.4.1</version>
+				<configuration>
+					<deploy.version>1</deploy.version>
+					<deploy.projectId>xenon-sentry-338907</deploy.projectId>
+				</configuration>
+			</plugin>
+			<plugin>
+					<groupId>com.google.cloud.tools</groupId>
+					<artifactId>jib-maven-plugin</artifactId>
+					<version>3.2.0</version>
+
+				<configuration>
+					<to>
+						<image>gcr.io/xenon-sentry-338907/kubernetes</image>
+					</to>
+				</configuration>
+			</plugin>
+			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
